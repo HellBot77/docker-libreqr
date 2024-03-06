@@ -18,5 +18,5 @@ COPY --from=base /git/libreqr .
 COPY --from=build /usr/local/lib/php/extensions /usr/local/lib/php/extensions
 RUN apk add --no-cache libpng && \
     docker-php-ext-enable gd
-CMD [ "php", "-S", "0.0.0.0:80" ]
 EXPOSE 80
+CMD [ "php", "-S", "0.0.0.0:80" ]
